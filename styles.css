@@ -3,6 +3,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
+  
 
 header{
     display: flex;
@@ -10,37 +11,43 @@ header{
     justify-content: space-between;
     position: fixed;
     top: 0;
+    right: 30px;
     width: 100%;
     z-index: 1;
 }
 
 #header-img{
-    height: 100px;
-    width: auto;
-    justify-content: flex-start;
-}
-  
-
-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    height: auto;
+    width: 75px;
+    left: 50px;
     
+   
 }
-li{
-    margin-right: 5px;
-    padding: 15px;
-    font-size: 2rem;
-    font-weight: bold;
-    list-style: none;
-    flex-basis: auto;
-}
+#nav-bar {
+    
+    position: sticky;
+    top: 0;
+  }
 
-li a{
+  #hamitems { display: flex; }
+
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: orange;
-}
+    text-align: right;
+  }
+
+  #hamitems a:hover { color: orange; }
+
+  #nav-bar label, #hamburger { display: none; }
+
+
 
 #form{
     position: relative;
@@ -141,7 +148,7 @@ h4{
 
 .glove-img {
     height: auto;
-    width: 400px;
+    width: 300px;
 }
 #form-box {
     position: flex;
@@ -154,6 +161,416 @@ h3{
     text-shadow: 1;
 }
 
-footer {
-    padding: 40px;
+.footer-link{
+    padding-right: 40px;
+    font-size: 1.5rem;
+    list-style: none;
+    text-decoration: none;
 }
+
+#bottom-links{
+    
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 15px;
+    font-size: 50px
+}
+
+#copyright{
+    font-size: 30px;
+    text-align: left;
+}
+
+
+
+@media screen and (max-width: 768px){
+   
+    body{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+  
+ 
+    }
+
+    #webpage-container{
+
+        display: block;
+        max-width: 768px;
+        width: 100%;
+        
+    }
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+    
+    #header-img{
+        
+        height: 75px;
+        width: auto;
+    }
+    #nav-bar{
+        width: 0;
+        padding-top: 15px;
+        padding-right: 25px;
+    }
+
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+        padding: 5px;
+        font-size: 15px;
+        
+      }
+
+      
+      /* SHOW HAMBURGER ICON */
+
+      #nav-bar label {
+
+        display: inline-block;
+        color: white;
+        background: #a02620;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+      }
+
+    #hamitems { 
+        display: none;
+        width: 100%;
+        height: auto;
+        
+    }
+    
+    #nav-bar input:checked ~ #hamitems {
+           position: relative;
+           left: -50px;
+           display: inline-block;
+        }
+    
+
+
+    #form{
+        position: relative;
+        top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    
+    h1{
+        position: relative;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding-top: 5px;
+        color:#a02620;
+        font-size: 1.8rem;
+    }
+    #email {
+        height: 30px;
+        width: 400px;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 1rem;
+    }
+    #submit {
+        height: 35px;
+        width: 200px;
+        margin-top: 15px;
+    }
+    
+    .marketing{
+
+        display: flex;
+        flex-direction: column;
+   
+        max-width: 300px;
+        margin-top: 30px;
+        font-size: small;
+        
+    }
+    
+    #icon {
+        position: relative;
+        left: 0;
+        width: 124px;
+    }
+    
+    #pros {
+        position: relative;
+        left: -10px;
+        display: flex;
+        flex-direction:column;
+        margin-top: 0;
+
+    }
+
+
+
+    #video{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+        width: 80%;
+        height: auto;
+        
+        
+    }
+
+
+    #container-gloves {
+        top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        
+}
+
+#left{
+    padding-bottom: 100px;
+}
+#center{
+    padding-bottom: 100px;
+}
+#right{
+    padding-bottom: 100px;
+}
+
+
+.select{
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    color:black;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+
+span{
+    font-size: 25px;
+    font-weight: bold;  
+}
+
+h4{
+    text-transform: uppercase;
+    font-size: 0.7rem
+}
+
+.glove-img {
+    height: auto;
+    width: 275px;
+    align-items: center;
+
+}
+
+#motto{
+    display: flex;
+    flex-direction: column;
+}
+#form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    padding-left: 40px;
+}
+
+h3{
+    padding-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+ 
+}
+.footer-link{
+    padding-right: 40px;
+    font-size: 1em;
+}
+
+#bottom-links {
+    justify-content: center;
+    font-size: 15px
+
+}
+#copyright{
+    font-size: 15px;
+}
+}
+
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1000px){
+
+body{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    right: 30px;
+    width: 100%;
+    z-index: 1;
+}
+
+#header-img{
+    position: relative;
+    height: 100px;
+    width: auto;
+    left: 50px;
+    top: 15px;
+   
+}
+#nav-bar {
+    
+    position: sticky;
+    top: 0;
+  }
+
+  #hamitems { 
+      display: flex; 
+    }
+
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding-right: 100px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: right;
+  }
+
+  #hamitems a:hover { color: orange; }
+
+  #nav-bar label, #hamburger { display: none; }
+
+
+
+#video{
+    width:375px;
+    height: 200px;
+}
+    #webpage-container{
+    position: absolute;
+    display: block;
+    padding: 25px;
+
+}
+    #container-gloves {
+        position: relative;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+}
+span{
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 75px;
+    font-weight: bold;
+    padding-left: 50px;
+    
+}
+
+#left{
+    padding-bottom: 100px;
+}
+#center{
+    padding-bottom: 100px;
+}
+#right{
+    padding-bottom: 100px;
+}
+
+h4{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem
+}
+
+.glove-img {
+    height: auto;
+    width: 275px;
+    
+}
+.select{
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    color:black;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#container-form{
+    position: relative;
+    left: 0;   
+
+}
+
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    text-shadow: 1;
+}
+.footer-link{
+    padding-right: 40px;
+    font-size: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+#bottom-links{
+    
+    top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    left: 15px;
+    font-size: 20px
+}
+
+#copyright{
+    font-size: 15px;
+    text-align: left;
+}
+
+}
+
